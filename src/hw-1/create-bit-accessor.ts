@@ -9,18 +9,18 @@ export class CreateBitAccessor {
 
   private validate(arrayIndex: number, bitIndex: number) {
     if (arrayIndex < 0) {
-      throw Error('Array index < 0')
+      throw new Error('Array index < 0')
     }
     if (this.array.length <= arrayIndex) {
-      throw Error('Array index > array length')
+      throw new Error('Array index > array length')
     }
 
     if (bitIndex < 0) {
-      throw Error('Bit index < 0')
+      throw new Error('Bit index < 0')
     }
 
     if (this.array.BYTES_PER_ELEMENT * 8 <= bitIndex) {
-      throw Error('Bit index < 0')
+      throw new Error('Bit index < 0')
     }
   }
 
