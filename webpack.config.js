@@ -15,10 +15,14 @@ const config = {
   devServer: {
     open: true,
     host: 'localhost',
+    hot: true,
+    static: {
+      directory: path.join(__dirname, 'public'),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html',
+      template: 'public/index.html',
     }),
 
     // Add your plugins here
@@ -49,6 +53,9 @@ const config = {
     ],
   },
   resolve: {
+    alias: {
+      models: path.resolve(__dirname, './src/models'),
+    },
     extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
   },
 }

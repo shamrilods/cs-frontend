@@ -1,4 +1,4 @@
-import { Bit, TypedArray } from './types'
+import { Bit, TypedArray } from 'models'
 
 export class CreateBitAccessor {
   private array: TypedArray
