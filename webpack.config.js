@@ -44,7 +44,7 @@ const config = {
         use: [stylesHandler, 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|jpeg|gif)$/i,
         type: 'asset',
       },
 
@@ -55,6 +55,8 @@ const config = {
   resolve: {
     alias: {
       models: path.resolve(__dirname, './src/models'),
+      assets: path.resolve(__dirname, './src/assets'),
+      utils: path.resolve(__dirname, './src/utils'),
     },
     extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
   },
