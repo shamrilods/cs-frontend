@@ -12,10 +12,12 @@
     "skipLibCheck": true,
     "baseUrl": "./src",
     "paths": {
-      "models/*": ["models/*"]
+      "models/*": ["models/*"],
+      "assets/*": ["assets/*"],
+      "utils/*": ["utils/*"],
     }
   },
 
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*", "custom.d.ts"],
+  "exclude": ["node_modules"],
 }
